@@ -1,0 +1,25 @@
+{
+  "name": "web-graphics-playground",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/taenykim/web-graphics-playground.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/taenykim/web-graphics-playground/issues"
+  },
+  "homepage": "https://github.com/taenykim/web-graphics-playground#readme",
+  "dependencies": {
+    "three": "^0.140.0"
+  },
+  "devDependencies": {
+    "@types/three": "^0.140.0"
+  }
+}
