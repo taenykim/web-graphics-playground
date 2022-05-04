@@ -1,4 +1,8 @@
-import { Scene } from "three";
+import * as THREE from "three";
 
-const scene = new Scene();
-console.log(scene);
+const renderer = new THREE.WebGLRenderer({
+  alpha: true,
+  antialias: true,
+});
+
+console.log(renderer);
