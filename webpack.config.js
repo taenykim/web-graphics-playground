@@ -1,7 +1,10 @@
 const path = require("path");
 
 module.exports = {
-  entry: "./src/index.ts",
+  entry: {
+    "threejs/rotatingCube/index": "./src/threejs/rotatingCube/index.ts",
+    "threejs/drawingLines/index": "./src/threejs/drawingLines/index.ts",
+  },
   target: "web",
   module: {
     rules: [
@@ -16,7 +19,7 @@ module.exports = {
     extensions: [".tsx", ".ts", ".js"],
   },
   output: {
-    filename: "index.js",
+    filename: "[name].js",
     path: path.resolve(__dirname, "src"),
     publicPath: "/",
   },
