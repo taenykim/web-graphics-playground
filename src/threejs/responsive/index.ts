@@ -50,6 +50,10 @@ function main() {
   function render(time: number) {
     time *= 0.001;
 
+    const canvas = renderer.domElement;
+    camera.aspect = canvas.clientWidth / canvas.clientHeight;
+    camera.updateProjectionMatrix();
+
     cubes.forEach((cube, ndx) => {
       const speed = 1 + ndx * 0.1;
       const rot = time * speed;
