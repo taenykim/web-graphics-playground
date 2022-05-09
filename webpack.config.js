@@ -8,6 +8,10 @@ module.exports = {
       "./src/threejs/tutorial/drawingLines/index.ts",
     "threejs/tutorial/responsive/index":
       "./src/threejs/tutorial/responsive/index.ts",
+    "threejs/primitives/BoxGeometry/index":
+      "./src/threejs/primitives/BoxGeometry/index.ts",
+    "threejs/primitives/CircleGeometry/index":
+      "./src/threejs/primitives/CircleGeometry/index.ts",
   },
   target: "web",
   module: {
