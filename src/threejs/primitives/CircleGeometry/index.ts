@@ -22,10 +22,16 @@ function main() {
   }
 
   const radius = 1; // ui: radius
-  const segments = 24; // ui: segments
-  const geometry = new THREE.CircleGeometry(radius, segments);
-
-  const material = new THREE.MeshPhongMaterial({ color: 0x44aa88 });
+  const segments = 120; // ui: segments
+  const thetaStart = 0; // ui: thetaStart
+  const thetaLength = Math.PI * 2; // ui: thetaLength
+  const geometry = new THREE.CircleGeometry(
+    radius,
+    segments,
+    thetaStart,
+    thetaLength
+  );
+  const material = new THREE.MeshBasicMaterial({ color: 0x44aa88 });
 
   const cube = new THREE.Mesh(geometry, material);
   scene.add(cube);
