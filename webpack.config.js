@@ -2,9 +2,12 @@ const path = require("path");
 
 module.exports = {
   entry: {
-    "threejs/rotatingCube/index": "./src/threejs/rotatingCube/index.ts",
-    "threejs/drawingLines/index": "./src/threejs/drawingLines/index.ts",
-    "threejs/responsive/index": "./src/threejs/responsive/index.ts",
+    "threejs/tutorial/rotatingCube/index":
+      "./src/threejs/tutorial/rotatingCube/index.ts",
+    "threejs/tutorial/drawingLines/index":
+      "./src/threejs/tutorial/drawingLines/index.ts",
+    "threejs/tutorial/responsive/index":
+      "./src/threejs/tutorial/responsive/index.ts",
   },
   target: "web",
   module: {
