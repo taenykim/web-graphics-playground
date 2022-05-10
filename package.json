@@ -18,9 +18,11 @@
   },
   "homepage": "https://github.com/taenykim/web-graphics-playground#readme",
   "dependencies": {
+    "animejs": "^3.2.1",
     "three": "^0.140.0"
   },
   "devDependencies": {
+    "@types/animejs": "^3.1.4",
     "@types/three": "^0.140.0",
     "ts-loader": "^9.3.0",
     "typescript": "^4.6.4",

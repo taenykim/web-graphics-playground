@@ -12,6 +12,7 @@ module.exports = {
       "./src/threejs/primitives/BoxGeometry/index.ts",
     "threejs/primitives/CircleGeometry/index":
       "./src/threejs/primitives/CircleGeometry/index.ts",
+    "animejs/index": "./src/animejs/index.ts",
   },
   target: "web",
   module: {
