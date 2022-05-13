@@ -18,3 +18,24 @@ button?.addEventListener("click", () => {
   state = (state + 1) % 2;
   console.log(state);
 });
+
+var logEl = document.querySelector(".battery-log") as HTMLElement;
+
+var battery = {
+  charged: "%200",
+  cycles: 120,
+  안녕: "안녕",
+};
+
+//parseInt
+
+anime({
+  targets: battery,
+  charged: 300,
+  cycles: 130,
+  round: 1,
+  easing: "linear",
+  update: function () {
+    logEl.innerHTML = JSON.stringify(battery.charged);
+  },
+});
