@@ -58,3 +58,33 @@ anime({
   direction: "alternate",
   easing: "easeInOutExpo",
 });
+
+const roundLogEl = document.querySelector(".round-log");
+
+anime({
+  targets: roundLogEl,
+  innerHTML: [0, 3000],
+  easing: "linear",
+  duration: 3000,
+  round: 1, // Will round the animated value to 1 decimal
+});
+
+anime({
+  targets: ".specific-prop-params-demo",
+  translateX: {
+    value: 250,
+    duration: 800,
+  },
+  rotate: {
+    value: 360,
+    duration: 1800,
+    easing: "easeInOutSine",
+  },
+  scale: {
+    value: 2,
+    duration: 1600,
+    delay: 1000,
+    easing: "easeInOutQuart",
+  },
+  delay: 3000, // All properties except 'scale' inherit 250ms delay
+});
