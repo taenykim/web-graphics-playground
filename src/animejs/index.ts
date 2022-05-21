@@ -88,3 +88,93 @@ anime({
   },
   delay: 3000, // All properties except 'scale' inherit 250ms delay
 });
+
+anime({
+  targets: ".function-based-params-demo .el",
+  translateX: 270,
+  direction: "alternate",
+  loop: true,
+  delay: function (el, i, l) {
+    return i * 100;
+  },
+  endDelay: function (el, i, l) {
+    return (l - i) * 100;
+  },
+});
+
+const relativeEl = document.querySelector(".el.relative-values") as HTMLElement;
+relativeEl.style.transform = "translateX(100px)";
+
+anime({
+  targets: ".el.relative-values",
+  translateX: {
+    value: "*=2.5", // 100px * 2.5 = '250px'
+    duration: 1000,
+  },
+  width: {
+    value: "-=20px", // 28 - 20 = '8px'
+    duration: 1800,
+    easing: "easeInOutSine",
+  },
+  rotate: {
+    value: "+=2turn", // 0 + 2 = '2turn'
+    duration: 1800,
+    easing: "easeInOutSine",
+  },
+  direction: "alternate",
+});
+
+anime({
+  targets: ".function-based-values-demo .el",
+  translateX: (el: HTMLElement) => {
+    return el.getAttribute("data-x");
+  },
+  translateY: (el: HTMLElement, i: number) => {
+    return 50 + -50 * i;
+  },
+  scale: (el: HTMLElement, i: number, l: number) => {
+    return l - i + 0.25;
+  },
+  rotate: () => {
+    return anime.random(-360, 360);
+  },
+  borderRadius: () => {
+    return ["50%", anime.random(10, 35) + "%"];
+  },
+  duration: () => {
+    return anime.random(1200, 1800);
+  },
+  delay: () => {
+    return anime.random(0, 400);
+  },
+  direction: "alternate",
+  loop: true,
+});
+
+anime({
+  targets: ".property-keyframes-demo .el",
+  translateX: [
+    { value: 250, duration: 1000, delay: 500 },
+    { value: 0, duration: 1000, delay: 500 },
+  ],
+  translateY: [
+    { value: -40, duration: 500 },
+    { value: 40, duration: 500, delay: 1000 },
+    { value: 0, duration: 500, delay: 1000 },
+  ],
+  scaleX: [
+    { value: 4, duration: 100, delay: 500, easing: "easeOutExpo" },
+    { value: 1, duration: 900 },
+    { value: 4, duration: 100, delay: 500, easing: "easeOutExpo" },
+    { value: 1, duration: 900 },
+  ],
+  scaleY: [
+    { value: [1.75, 1], duration: 500 },
+    { value: 2, duration: 50, delay: 1000, easing: "easeOutExpo" },
+    { value: 1, duration: 450 },
+    { value: 1.75, duration: 50, delay: 1000, easing: "easeOutExpo" },
+    { value: 1, duration: 450 },
+  ],
+  easing: "easeOutElastic(1, .8)",
+  loop: true,
+});

@@ -17,6 +17,11 @@
         background-color: currentColor;
       }
 
+      .function-based-values-demo {
+        position: relative;
+        width: 300px;
+      }
+
       .el {
         position: relative;
         width: 20px;
@@ -24,6 +29,24 @@
         color: red;
         background-color: currentColor;
       }
+      .relative-values.el {
+        position: relative;
+        width: 40px;
+        height: 40px;
+        color: #a4ff4f;
+        background-color: currentColor;
+        border-radius: 50%;
+      }
+
+      .property-keyframes-demo .el {
+        position: relative;
+        width: 40px;
+        height: 40px;
+        color: #a4ff4f;
+        background-color: currentColor;
+        border-radius: 50%;
+      }
+
       .button {
         position: fixed;
         left: 0;
@@ -62,6 +85,20 @@
     </svg>
     <div class="round-log"></div>
     <div class="specific-prop-params-demo"></div>
+    <div class="function-based-params-demo">
+      <div class="el"></div>
+      <div class="el"></div>
+      <div class="el"></div>
+    </div>
+    <div class="relative-values el"></div>
+    <div class="function-based-values-demo">
+      <div data-x="170" class="el"></div>
+      <div data-x="80" class="el"></div>
+      <div data-x="270" class="el"></div>
+    </div>
+    <div class="property-keyframes-demo">
+      <div class="el"></div>
+    </div>
     <script type="module" src="./index.js"></script>
     <button class="button">버튼</button>
   </body>
