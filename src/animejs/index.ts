@@ -193,3 +193,31 @@ anime({
   ],
   delay: anime.stagger(200, { grid: [14, 5], from: "center" }),
 });
+
+anime({
+  targets: ".staggering-axis-grid-demo .el",
+  translateX: anime.stagger(10, { grid: [14, 5], from: "first", axis: "x" }),
+  translateY: anime.stagger(10, { grid: [14, 5], from: "first", axis: "y" }),
+  rotateZ: anime.stagger([0, 90], { grid: [14, 5], from: "first", axis: "x" }),
+  delay: anime.stagger(100, { grid: [14, 5], from: "first" }),
+  easing: "easeInOutQuad",
+  duration: 700,
+});
+
+const t1 = anime.timeline({
+  easing: "easeOutExpo",
+  duration: 1000,
+});
+
+t1.add({
+  targets: ".el.ddong",
+  translateX: 30,
+});
+t1.add({
+  targets: ".el.ddong2",
+  translateX: 30,
+});
+t1.add({
+  targets: ".el.ddong3",
+  translateX: 30,
+});
