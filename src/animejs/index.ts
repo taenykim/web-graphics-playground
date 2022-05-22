@@ -178,3 +178,9 @@ anime({
   easing: "easeOutElastic(1, .8)",
   loop: true,
 });
+
+anime({
+  targets: ".staggering-easing-demo .el",
+  translateX: 270,
+  delay: anime.stagger(1000, { easing: "easeOutQuad" }),
+});
