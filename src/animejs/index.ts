@@ -184,3 +184,12 @@ anime({
   translateX: 270,
   delay: anime.stagger(1000, { easing: "easeOutQuad" }),
 });
+
+anime({
+  targets: ".staggering-grid-demo .el",
+  scale: [
+    { value: 2, easing: "easeInOutQuad", duration: 200 },
+    { value: 1, easing: "easeInOutQuad", duration: 300 },
+  ],
+  delay: anime.stagger(200, { grid: [14, 5], from: "center" }),
+});
