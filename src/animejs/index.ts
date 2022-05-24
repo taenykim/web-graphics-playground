@@ -229,3 +229,21 @@ t1.add(
   },
   "+=1000"
 );
+
+var animation = anime({
+  targets: ".seek-anim-demo .el",
+  translateX: 270,
+  delay: function (el, i) {
+    return i * 100;
+  },
+  elasticity: 200,
+  easing: "easeInOutSine",
+});
+
+const seekProgressEl = document.querySelector(
+  ".seek-anim-demo .progress"
+) as HTMLInputElement;
+
+seekProgressEl.oninput = () => {
+  animation.seek(animation.duration * (Number(seekProgressEl.value) / 100));
+};
