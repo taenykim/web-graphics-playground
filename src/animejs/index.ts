@@ -206,18 +206,26 @@ anime({
 
 const t1 = anime.timeline({
   easing: "easeOutExpo",
-  duration: 1000,
 });
 
-t1.add({
-  targets: ".el.ddong",
-  translateX: 30,
-});
-t1.add({
-  targets: ".el.ddong2",
-  translateX: 30,
-});
-t1.add({
-  targets: ".el.ddong3",
-  translateX: 30,
-});
+t1.add(
+  {
+    targets: ".el.ddong",
+    translateX: 30,
+  },
+  500
+);
+t1.add(
+  {
+    targets: ".el.ddong2",
+    translateX: 30,
+  },
+  500
+);
+t1.add(
+  {
+    targets: ".el.ddong3",
+    translateX: 30,
+  },
+  "+=1000"
+);
