@@ -247,3 +247,25 @@ const seekProgressEl = document.querySelector(
 seekProgressEl.oninput = () => {
   animation.seek(animation.duration * (Number(seekProgressEl.value) / 100));
 };
+
+var updates = 0;
+var progressLogEl = document.querySelector(
+  `.update-demo .progress-log`
+) as HTMLInputElement;
+var updateLogEl = document.querySelector(
+  `.update-demo .update-log`
+) as HTMLInputElement;
+
+anime({
+  targets: ".update-demo .el",
+  translateX: 270,
+  delay: 1000,
+  direction: "alternate",
+  loop: 3,
+  easing: "easeInOutCirc",
+  update: function (anim) {
+    updates++;
+    progressLogEl.value = "progress : " + Math.round(anim.progress) + "%";
+    updateLogEl.value = "updates : " + updates;
+  },
+});
