@@ -256,7 +256,7 @@ var updateLogEl = document.querySelector(
   `.update-demo .update-log`
 ) as HTMLInputElement;
 
-anime({
+var ani = anime({
   targets: ".update-demo .el",
   translateX: 270,
   delay: 1000,
@@ -268,4 +268,8 @@ anime({
     progressLogEl.value = "progress : " + Math.round(anim.progress) + "%";
     updateLogEl.value = "updates : " + updates;
   },
+});
+
+ani.finished.then(() => {
+  console.log("hey");
 });
